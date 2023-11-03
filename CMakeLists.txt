@@ -104,3 +104,9 @@ add_dependencies(dlo_map_node ${catkin_EXPORTED_TARGETS})
 target_compile_options(dlo_map_node PRIVATE ${OpenMP_FLAGS})
 target_link_libraries(dlo_map_node ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenMP_LIBS} Threads::Threads)
 
+# MapBuilder Node
+add_executable (build_map_node src/mapbuilder_node.cc)
+add_dependencies(build_map_node ${catkin_EXPORTED_TARGETS})
+target_compile_options(build_map_node PRIVATE ${OpenMP_FLAGS})
+target_link_libraries(build_map_node ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenMP_LIBS} Threads::Threads)
+
