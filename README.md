@@ -1,3 +1,7 @@
+原代码建图过程只保留关键帧的点云导致建图不够稠密（并且进行了体素滤波），尝试将每一帧点云利用监听到的tf转换到全局坐标系下后添加到地图中，以实现更加稠密的建图功能，结果发现接受到雷雷达的点云数据与ros系统中机器人的tf数据的时间戳无法对齐，进而导致无法使用正确的tf变换将点云转换到全局坐标系下。
+暂未找到解决方案......
+
+
 # Direct LiDAR Odometry: <br> Fast Localization with Dense Point Clouds
 
 #### [[IEEE RA-L](https://ieeexplore.ieee.org/document/9681177)] [[ArXiv](https://arxiv.org/abs/2110.00605)] [[Video](https://www.youtube.com/watch?v=APot6QP_wvg)] [[Code](https://github.com/vectr-ucla/direct_lidar_odometry)]
